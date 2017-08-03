@@ -1,2 +1,4 @@
-/comicsdbenv
 *.pyc
+*~
+.DS_Store
+/comicsdbenv
