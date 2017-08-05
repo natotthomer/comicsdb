@@ -9,3 +9,10 @@ class Book(models.Model):
     isbn = models.CharField(max_length=16, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def to_user(self):
+        return {
+            'title': self.title,
+            'isbn': self.isbn,
+            'id': self.id,
+        }
